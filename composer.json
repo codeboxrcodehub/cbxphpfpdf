@@ -1,0 +1,14 @@
+{
+  "config": {
+    "vendor-dir": "lib/vendor"
+  },
+  "require": {
+    "fawno/fpdf": "^1.86"
+  },
+  "autoload": {
+    "psr-4": {
+      "Cbx\\Phpfpdf\\": "includes/"
+    },
+    "files": []
+  }
+}
