@@ -16,11 +16,11 @@
  * Plugin Name:       CBX PHPFPDF Library
  * Plugin URI:        https://github.com/codeboxrcodehub/cbxphpfpdf
  * Description:       fpdf library as WordPress plugin based on https://github.com/fawno/FPDF
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Codeboxr
  * Author URI:        https://github.com/PHPOffice/PhpDomPDF
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
+ * License:           MIT
+ * License URI:       https://github.com/codeboxrcodehub/cbxphpfpdf/blob/master/LICENSE.txt
  * Text Domain:       cbxphpfpdf
  * Domain Path:       /languages
  */
@@ -29,10 +29,9 @@
 if (!defined('WPINC')) {
     die;
 }
-use Cbx\Phpfpdf\Hooks;
 
 defined('CBXPHPFPDF_PLUGIN_NAME') or define('CBXPHPFPDF_PLUGIN_NAME', 'cbxphpfpdf');
-defined('CBXPHPFPDF_PLUGIN_VERSION') or define('CBXPHPFPDF_PLUGIN_VERSION', '1.0.0');
+defined('CBXPHPFPDF_PLUGIN_VERSION') or define('CBXPHPFPDF_PLUGIN_VERSION', '1.0.');
 defined('CBXPHPFPDF_BASE_NAME') or define('CBXPHPFPDF_BASE_NAME', plugin_basename(__FILE__));
 defined('CBXPHPFPDF_ROOT_PATH') or define('CBXPHPFPDF_ROOT_PATH', plugin_dir_path(__FILE__));
 defined('CBXPHPFPDF_ROOT_URL') or define('CBXPHPFPDF_ROOT_URL', plugin_dir_url(__FILE__));
@@ -106,7 +105,7 @@ class CBXPhpFpdf
      * @return bool
      */
     private static function php_version_check(){
-        return version_compare( PHP_VERSION, '7.1.0', '>=' );
+        return version_compare( PHP_VERSION, '7.4', '>=' );
     }//end method php_version_check
 
     /**
@@ -188,7 +187,6 @@ if(!function_exists('cbxphpfpdf_load')){
     function cbxphpfpdf_load(){
         if(CBXPhpFpdf::environment_ready()){
             require_once CBXPHPFPDF_ROOT_PATH . "lib/vendor/autoload.php";
-            new Hooks();
         }
     }//end function cbxphpfpdf_load
 }
