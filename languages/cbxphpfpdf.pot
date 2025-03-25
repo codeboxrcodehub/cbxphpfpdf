@@ -1,0 +1,53 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CBX PHPFPDF Library\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-02-12 10:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.7.1; wp-6.7.2\n"
+"X-Domain: cbxphpfpdf"
+
+#. Name of the plugin
+msgid "CBX PHPFPDF Library"
+msgstr ""
+
+#: cbxphpfpdf.php:67
+msgid "CBX PhpFPDF Library plugin requires PHP extensions: Zip, XML, and GD2."
+msgstr ""
+
+#: cbxphpfpdf.php:63
+msgid "CBX PhpFPDF Library plugin requires PHP version 7.1 or newer"
+msgstr ""
+
+#. Author of the plugin
+msgid "Codeboxr"
+msgstr ""
+
+#. Description of the plugin
+msgid "fpdf library as WordPress plugin based on https://github.com/fawno/FPDF"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://github.com/codeboxrcodehub/cbxphpfpdf"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://github.com/PHPOffice/PhpDomPDF"
+msgstr ""
+
+#: cbxphpfpdf.php:150
+msgid "PHP Dompdf Doc"
+msgstr ""
+
+#: cbxphpfpdf.php:149
+msgid "Support"
+msgstr ""

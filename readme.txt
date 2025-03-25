@@ -1,15 +1,14 @@
 === CBX PHPFPDF Library ===
 Contributors: codeboxr, manchumahara
-Requires at least: 3.5
-Tested up to: 6.6.2
-Stable tag: 1.0.0
+Requires at least: 5.3
+Tested up to: 6.7.2
+Stable tag: 1.0.1
 License: MIT
 License URI: https://github.com/codeboxrcodehub/cbxphpfpdf/blob/master/LICENSE.txt
 
 Open source FPDF php library released as WordPress plugin to use easily
 
 == Description ==
-
 
 Software requirements
 
@@ -31,6 +30,9 @@ based on https://github.com/Setasign/FPDF  which is based on original sourcecode
 
 
 == Changelog ==
+= 1.0.1 =
+* Some helper functions added
+* WordPress 6.7.2 compatible
 
 = 1.0.0 =
 * First public release
