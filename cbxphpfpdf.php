@@ -16,7 +16,7 @@
  * Plugin Name:       CBX PHPFPDF Library
  * Plugin URI:        https://github.com/codeboxrcodehub/cbxphpfpdf
  * Description:       fpdf library as WordPress plugin based on https://github.com/fawno/FPDF
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            Codeboxr
  * Author URI:        https://github.com/PHPOffice/PhpDomPDF
  * License:           MIT
@@ -31,7 +31,7 @@ if (!defined('WPINC')) {
 }
 
 defined('CBXPHPFPDF_PLUGIN_NAME') or define('CBXPHPFPDF_PLUGIN_NAME', 'cbxphpfpdf');
-defined('CBXPHPFPDF_PLUGIN_VERSION') or define('CBXPHPFPDF_PLUGIN_VERSION', '1.0.');
+defined('CBXPHPFPDF_PLUGIN_VERSION') or define('CBXPHPFPDF_PLUGIN_VERSION', '1.0.2');
 defined('CBXPHPFPDF_BASE_NAME') or define('CBXPHPFPDF_BASE_NAME', plugin_basename(__FILE__));
 defined('CBXPHPFPDF_ROOT_PATH') or define('CBXPHPFPDF_ROOT_PATH', plugin_dir_path(__FILE__));
 defined('CBXPHPFPDF_ROOT_URL') or define('CBXPHPFPDF_ROOT_URL', plugin_dir_url(__FILE__));

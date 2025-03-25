@@ -2,7 +2,7 @@
 Contributors: codeboxr, manchumahara
 Requires at least: 5.3
 Tested up to: 6.7.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: MIT
 License URI: https://github.com/codeboxrcodehub/cbxphpfpdf/blob/master/LICENSE.txt
 
@@ -30,6 +30,9 @@ based on https://github.com/Setasign/FPDF  which is based on original sourcecode
 
 
 == Changelog ==
+= 1.0.2 =
+* [updated] Minor improvements
+
 = 1.0.1 =
 * Some helper functions added
 * WordPress 6.7.2 compatible
