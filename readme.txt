@@ -2,7 +2,7 @@
 Contributors: codeboxr, manchumahara
 Requires at least: 5.3
 Tested up to: 6.8
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 License: MIT
 License URI: https://github.com/codeboxrcodehub/cbxphpfpdf/blob/master/LICENSE.txt
 
@@ -30,6 +30,9 @@ based on https://github.com/Setasign/FPDF  which is based on original sourcecode
 
 
 == Changelog ==
+= 1.0.4 =
+* [updated] Improved the plugin's important link/help url display
+
 = 1.0.3 =
 * [updated] Plugin update checker added
 

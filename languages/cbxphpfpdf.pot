@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CBX PHPFPDF Library\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-02-12 10:29+0000\n"
+"POT-Creation-Date: 2025-04-15 17:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -20,11 +20,11 @@ msgstr ""
 msgid "CBX PHPFPDF Library"
 msgstr ""
 
-#: cbxphpfpdf.php:67
+#: cbxphpfpdf.php:72
 msgid "CBX PhpFPDF Library plugin requires PHP extensions: Zip, XML, and GD2."
 msgstr ""
 
-#: cbxphpfpdf.php:63
+#: cbxphpfpdf.php:68
 msgid "CBX PhpFPDF Library plugin requires PHP version 7.1 or newer"
 msgstr ""
 
@@ -32,8 +32,20 @@ msgstr ""
 msgid "Codeboxr"
 msgstr ""
 
+#: cbxphpfpdf.php:159
+msgid "Download"
+msgstr ""
+
+#: cbxphpfpdf.php:159
+msgid "Download Latest"
+msgstr ""
+
 #. Description of the plugin
 msgid "fpdf library as WordPress plugin based on https://github.com/fawno/FPDF"
+msgstr ""
+
+#: cbxphpfpdf.php:158
+msgid "Github Repo"
 msgstr ""
 
 #. URI of the plugin
@@ -42,12 +54,4 @@ msgstr ""
 
 #. Author URI of the plugin
 msgid "https://github.com/PHPOffice/PhpDomPDF"
-msgstr ""
-
-#: cbxphpfpdf.php:150
-msgid "PHP Dompdf Doc"
-msgstr ""
-
-#: cbxphpfpdf.php:149
-msgid "Support"
 msgstr ""

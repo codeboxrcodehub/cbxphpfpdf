@@ -16,7 +16,7 @@
  * Plugin Name:       CBX PHPFPDF Library
  * Plugin URI:        https://github.com/codeboxrcodehub/cbxphpfpdf
  * Description:       fpdf library as WordPress plugin based on https://github.com/fawno/FPDF
- * Version:           1.0.3
+ * Version:           1.0.4
  * Author:            Codeboxr
  * Author URI:        https://github.com/PHPOffice/PhpDomPDF
  * License:           MIT
@@ -31,7 +31,7 @@ if (!defined('WPINC')) {
 }
 
 defined('CBXPHPFPDF_PLUGIN_NAME') or define('CBXPHPFPDF_PLUGIN_NAME', 'cbxphpfpdf');
-defined('CBXPHPFPDF_PLUGIN_VERSION') or define('CBXPHPFPDF_PLUGIN_VERSION', '1.0.3');
+defined('CBXPHPFPDF_PLUGIN_VERSION') or define('CBXPHPFPDF_PLUGIN_VERSION', '1.0.4');
 defined('CBXPHPFPDF_BASE_NAME') or define('CBXPHPFPDF_BASE_NAME', plugin_basename(__FILE__));
 defined('CBXPHPFPDF_ROOT_PATH') or define('CBXPHPFPDF_ROOT_PATH', plugin_dir_path(__FILE__));
 defined('CBXPHPFPDF_ROOT_URL') or define('CBXPHPFPDF_ROOT_URL', plugin_dir_url(__FILE__));
@@ -45,7 +45,7 @@ class CBXPhpFpdf
 {
     function __construct()
     {
-        add_filter('plugin_row_meta', array($this, 'plugin_row_meta'), 10, 2);
+        add_filter('plugin_row_meta', array($this, 'plugin_row_meta'), 10, 4);
         add_action( 'admin_notices', [ $this, 'activation_error_display' ] );
 
         add_action( 'init', [ $this, 'load_plugin_textdomain' ]);
@@ -74,9 +74,6 @@ class CBXPhpFpdf
 
         if ( sizeof( $errors ) > 0 ) {
             update_option( 'cbxphpfpdf_activation_error', $errors );
-            //deactivate_plugins(plugin_basename(__FILE__));
-            //wp_die('Plugin not activated due to dependency not fulfilled.');
-            //die();
         }
 
     }//end method activation
@@ -139,27 +136,31 @@ class CBXPhpFpdf
         return self::php_version_check() && self::extension_check(  [ 'zip', 'xml', 'gd', 'mbstring', 'dom' ]);
     }//end method environment_ready
 
-    /**
-     * Plugin support and doc page url
-     *
-     * @param $links
-     * @param $file
-     *
-     * @return array
-     */
-    public function plugin_row_meta($links, $file)
-    {
-        if (strpos($file, 'cbxphpfpdf.php') !== false) {
-            $new_links = array(
-                'support' => '<a href="https://github.com/codeboxrcodehub/cbxphpfpdf" target="_blank">' . esc_html__('Support', 'cbxphpfpdf') . '</a>',
-                'doc' => '<a href="https://github.com/dompdf/dompdf" target="_blank">' . esc_html__('PHP Dompdf Doc', 'cbxphpfpdf') . '</a>'
-            );
+	/**
+	 * Filters the array of row meta for each/specific plugin in the Plugins list table.
+	 * Appends additional links below each/specific plugin on the plugins page.
+	 *
+	 * @access  public
+	 *
+	 * @param  array  $links_array  An array of the plugin's metadata
+	 * @param  string  $plugin_file_name  Path to the plugin file
+	 * @param  array  $plugin_data  An array of plugin data
+	 * @param  string  $status  Status of the plugin
+	 *
+	 * @return  array       $links_array
+	 */
+	public function plugin_row_meta( $links_array, $plugin_file_name, $plugin_data, $status ) {
+		if ( strpos( $plugin_file_name, CBXPHPFPDF_BASE_NAME ) !== false ) {
+			if ( ! function_exists( 'is_plugin_active' ) ) {
+				include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+			}
 
-            $links = array_merge($links, $new_links);
-        }
+			$links_array[] = '<a target="_blank" style="color:#005ae0 !important; font-weight: bold;" href="https://github.com/codeboxrcodehub/cbxphpfpdf" aria-label="' . esc_attr__( 'Github Repo', 'cbxphpfpdf' ) . '">' . esc_html__( 'Github Repo', 'cbxphpfpdf' ) . '</a>';
+			$links_array[] = '<a target="_blank" style="color:#005ae0 !important; font-weight: bold;" href="https://github.com/codeboxrcodehub/cbxphpfpdf/releases" aria-label="' . esc_attr__( 'Download', 'cbxphpfpdf' ) . '">' . esc_html__( 'Download Latest', 'cbxphpfpdf' ) . '</a>';
+		}
 
-        return $links;
-    }
+		return $links_array;
+	}//end plugin_row_meta
 
     /**
 	 * Load textdomain
