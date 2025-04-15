@@ -45,9 +45,6 @@ class CBXPhpFpdf
 {
     function __construct()
     {
-        //load text domain
-        load_plugin_textdomain('cbxphpfpdf', false, dirname(plugin_basename(__FILE__)) . '/languages/');
-
         add_filter('plugin_row_meta', array($this, 'plugin_row_meta'), 10, 2);
         add_action( 'admin_notices', [ $this, 'activation_error_display' ] );
 
