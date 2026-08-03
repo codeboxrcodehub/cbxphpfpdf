@@ -6,15 +6,21 @@
 	use Fawno\FPDF\Traits\CMYKTrait;
 	use Fawno\FPDF\Traits\PDFMacroableTrait;
 	use Fawno\FPDF\PDFWrapper;
+	use Fawno\FPDF\Traits\BasicFunctionsTrait;
+	use Fawno\FPDF\Traits\EAN13Trait;
 	use Fawno\FPDF\Traits\FontsTrait;
+	use FPDF\Scripts\ESignaturePlaceholder\ESignaturePlaceholderTrait;
 	use FPDF\Scripts\Attachments\AttachmentsTrait;
 	use FPDF\Scripts\PDFBookmark\PDFBookmarkTrait;
+	use FPDF\Scripts\PDFCircularText\PDFCircularTextTrait;
 	use FPDF\Scripts\PDFCode128\PDFCode128Trait;
 	use FPDF\Scripts\PDFDraw\PDFDrawTrait;
 	use FPDF\Scripts\PDFMemImage\PDFMemImageTrait;
 	use FPDF\Scripts\PDFMultiCellsTable\PDFMultiCellsTableTrait;
 	use FPDF\Scripts\PDFProtection\PDFProtectionTrait;
 	use FPDF\Scripts\PDFRotate\PDFRotateTrait;
+	use FPDF\Scripts\PDFTransform\PDFTransformTrait;
+	use FPDF\Scripts\QRcode\QRcodeTrait;
 	use FPDF\Scripts\RPDF\RPDFTrait;
 
 	class FawnoFPDF extends PDFWrapper {
@@ -23,6 +29,9 @@
 		use AttachmentsTrait {
 			AttachmentsTrait::_putresources as Attachments_putresources;
 			AttachmentsTrait::_putcatalog as Attachments_putcatalog;
+		}
+		use ESignaturePlaceholderTrait{
+			ESignaturePlaceholderTrait::_putcatalog as ESignaturePlaceholder_putcatalog;
 		}
 		use PDFBookmarkTrait {
 			PDFBookmarkTrait::_putresources as PDFBookmark_putresources;
@@ -36,6 +45,11 @@
 		use PDFMemImageTrait;
 		use PDFCode128Trait;
 		use PDFMultiCellsTableTrait;
+		use PDFTransformTrait;
+		use PDFCircularTextTrait;
+		use EAN13Trait;
+		use BasicFunctionsTrait;
+		use QRcodeTrait;
 
 		protected function _putresources () {
 			parent::_putresources();
@@ -49,5 +63,6 @@
 			parent::_putcatalog();
 			$this->_putbookmarkscatalog();
 			$this->_putfilescatalog();
+			$this->_putesignatureplaceholdercatalog();
 		}
 	}

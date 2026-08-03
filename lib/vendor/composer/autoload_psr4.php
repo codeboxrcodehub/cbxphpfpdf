@@ -7,6 +7,7 @@ $baseDir = dirname(dirname($vendorDir));
 
 return array(
     'Fawno\\FPDF\\' => array($vendorDir . '/fawno/fpdf/src'),
+    'Fawno\\Barcode\\' => array($vendorDir . '/fawno/fpdf/barcode'),
     'FPDF\\Scripts\\' => array($vendorDir . '/fawno/fpdf/scripts'),
     'Cbx\\Phpfpdf\\' => array($baseDir . '/includes'),
 );

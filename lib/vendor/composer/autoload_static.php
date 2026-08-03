@@ -10,6 +10,7 @@ class ComposerStaticInitab9c4164db05a244f5f8518a1546026b
         'F' => 
         array (
             'Fawno\\FPDF\\' => 11,
+            'Fawno\\Barcode\\' => 14,
             'FPDF\\Scripts\\' => 13,
         ),
         'C' => 
@@ -22,6 +23,10 @@ class ComposerStaticInitab9c4164db05a244f5f8518a1546026b
         'Fawno\\FPDF\\' => 
         array (
             0 => __DIR__ . '/..' . '/fawno/fpdf/src',
+        ),
+        'Fawno\\Barcode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/fawno/fpdf/barcode',
         ),
         'FPDF\\Scripts\\' => 
         array (

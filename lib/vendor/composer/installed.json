@@ -2,17 +2,17 @@
     "packages": [
         {
             "name": "fawno/fpdf",
-            "version": "1.86.3",
-            "version_normalized": "1.86.3.0",
+            "version": "1.90.0",
+            "version_normalized": "1.90.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fawno/FPDF.git",
-                "reference": "ff4e378a7c9c00c360ed356150351d9795047112"
+                "reference": "e9b224955ada91a4943f36738f455af4c45a8680"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fawno/FPDF/zipball/ff4e378a7c9c00c360ed356150351d9795047112",
-                "reference": "ff4e378a7c9c00c360ed356150351d9795047112",
+                "url": "https://api.github.com/repos/fawno/FPDF/zipball/e9b224955ada91a4943f36738f455af4c45a8680",
+                "reference": "e9b224955ada91a4943f36738f455af4c45a8680",
                 "shasum": ""
             },
             "require": {
@@ -28,7 +28,7 @@
                 "ext-openssl": "*",
                 "setasign/fpdi": "@stable"
             },
-            "time": "2024-05-02T19:17:46+00:00",
+            "time": "2026-06-29T13:13:25+00:00",
             "type": "library",
             "extra": {
                 "laravel": {
@@ -42,7 +42,8 @@
             "autoload": {
                 "psr-4": {
                     "Fawno\\FPDF\\": "src/",
-                    "FPDF\\Scripts\\": "scripts/"
+                    "FPDF\\Scripts\\": "scripts/",
+                    "Fawno\\Barcode\\": "barcode/"
                 },
                 "classmap": [
                     "fpdf/fpdf.php"
@@ -71,7 +72,7 @@
             ],
             "support": {
                 "issues": "https://github.com/fawno/FPDF/issues",
-                "source": "https://github.com/fawno/FPDF/tree/1.86.3"
+                "source": "https://github.com/fawno/FPDF/tree/1.90.0"
             },
             "install-path": "../fawno/fpdf"
         }
